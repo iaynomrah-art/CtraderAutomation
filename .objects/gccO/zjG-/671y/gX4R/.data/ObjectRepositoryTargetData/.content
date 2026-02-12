@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6CbZwUot4kW8UovqcISRGg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="65cbdab2-16f4-416b-905e-8054b5096f63" CvElementArea="841, 572, 19, 18" CvType="CheckBox" DesignTimeRectangle="847, 579, 7, 5" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' parentid='ic_checkmark' tag='path' class='' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="64059d8b-ad46-45e0-8e75-dc70ca375052" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="65cbdab2-16f4-416b-905e-8054b5096f63" CvTextArea="862, 575, 47, 13" CvTextArgument="Stop loss" CvType="Text" DesignTimeRectangle="863, 574, 45, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Stop loss' type='' parentid='root' tag='DIV' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Stop loss' /&gt;" Guid="ddfd35b8-14f3-49cd-8187-b96de6225ff3" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="079aa75379d684ad0b8cb17fbd31c275.jpg" xmlns="">0nnQtGkOQZk2SMRgqkHVVrQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Spotware cTrader  Open Trading Platfor",
+  "Type": "App",
+  "Id": "gccOyq3DdkyDL9KpVdR_Zg",
+  "Reference": "5PvIeVfsZUqzuh7wRQgqvQ/gccOyq3DdkyDL9KpVdR_Zg",
+  "Created": "2026-02-11T07:32:44.4844165Z",
+  "Updated": "2026-02-11T07:32:44.4844165Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

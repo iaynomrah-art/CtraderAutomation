@@ -1,0 +1,373 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PlaceOrder" this:PlaceOrder.order_amount="0.1" this:PlaceOrder.stop_loss="100" this:PlaceOrder.take_profit="100" this:PlaceOrder.symbol="XAUUSD" this:PlaceOrder.purchase_type="buy" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="message" Type="OutArgument(x:String)" />
+    <x:Property Name="status_code" Type="OutArgument(x:Int32)" />
+    <x:Property Name="order_amount" Type="InArgument(x:String)" />
+    <x:Property Name="stop_loss" Type="InArgument(x:String)" />
+    <x:Property Name="take_profit" Type="InArgument(x:String)" />
+    <x:Property Name="symbol" Type="InArgument(x:String)" />
+    <x:Property Name="purchase_type" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>PlaceOrder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="PlaceOrder" sap:VirtualizedContainerService.HintSize="1248,5048" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Spotware cTrader  Open Trading Platfor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="488,5025" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,4831" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,261" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" InteractionMode="HardwareEvents" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Shortcuts="[d(hk)][k(F9)][u(hk)]" Version="V5" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'EURUSD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="09256662-11af-4661-97ef-661a490632aa" CvElementArea="866, 341, 352, 22" CvType="InputBox" DesignTimeRectangle="871, 343, 331, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='23' parentid='root' tabindex='-1' tag='DIV' /&gt;" Guid="7a8b7850-3c4d-48b6-93c9-f162077ac424" InformativeScreenshot="70066dd649f9765cf946f3f9dbbeda4b.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="09256662-11af-4661-97ef-661a490632aa" CvElementArea="866, 341, 352, 22" CvType="InputBox" DesignTimeRectangle="1202, 343, 11, 19" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='72' parentid='root' tag='DIV' /&gt;" Guid="ef14400e-99b2-4c8a-9090-810653fa4ae5" SearchSteps="Selector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'INPUT(2)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_22" InteractionMode="SameAsCard" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[symbol]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" ContentHash="r_UldhcZpUeMK_u0-_77TQ" DesignTimeRectangle="658, 487, 328, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" Guid="9720f158-2f88-43ea-858d-bcf54bea85a0" InformativeScreenshot="37a8030af6b24af5bba89fa6343cfb28.png" Reference="-qKmx3x1-U6rFPOpaL12rg/FAf6NjP8-kS-0b8vbxI-Fg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'XAUUSD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="62da08e1-f88d-44ee-9243-14b4a852b9ab" ContentHash="_BjZVly-fEKaJcocc50KPg" CvTextArea="661, 522, 48, 11" CvTextArgument="XAUUSD" CvType="Text" DesignTimeRectangle="658, 514, 328, 29" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='39' parentid='root' tag='DIV' /&gt;" Guid="08826d76-d360-44c5-97f2-b89004841a07" InformativeScreenshot="38a43c458a136c1455049616f041f531.png" Reference="-qKmx3x1-U6rFPOpaL12rg/ZBp2SOyuVkqDlEpgXSo5Ug" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <If Condition="[purchase_type = &quot;buy&quot;]" sap:VirtualizedContainerService.HintSize="452,649" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Buy1.18541'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="8f847288-7782-4e3b-b413-ff3920f9c9ba" ContentHash="17fgpXfphUGsIfG_1KCPQQ" CvElementArea="814, 448, 183, 55" CvType="Button" DesignTimeRectangle="815, 449, 182, 52" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Buy' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" Guid="78c81410-0308-4bae-a8c8-fd8721435562" InformativeScreenshot="3b35258e724e59b0174f62c2d4cc7d6b.png" Reference="-qKmx3x1-U6rFPOpaL12rg/PFzQnrs_iE2whB60lCs2aw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sell1.18570'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="a3e3373e-876f-4ad1-8ddc-932b543daf14" ContentHash="Vv_QTIVPnk2ceePiR_sUKg" CvElementArea="621, 447, 191, 57" CvType="Button" DesignTimeRectangle="623, 449, 187, 52" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Sell' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='root' tag='DIV' /&gt;" Guid="060cebec-d224-414f-a36f-a53eeae0ef7c" InformativeScreenshot="37201006bd66fdc0971ef12417c8213c.png" Reference="-qKmx3x1-U6rFPOpaL12rg/iiOPnjNVlkqLynOtXmrZzg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Quantity'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,250" sap2010:WorkflowViewState.IdRef="NTypeInto_23" InteractionMode="SameAsCard" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[order_amount]" Version="V5">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="35ca1e98-38ab-418f-bba6-24e7447143ca" CvElementArea="841, 505, 142, 21" CvType="InputBox" DesignTimeRectangle="861, 507, 106, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='root_di root_do root_fe root_bx root_cc root_gb root_mr root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_py root_pz' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="6c5142dc-b534-4b88-8216-19d0e8e5ca87" InformativeScreenshot="2dd73e77a413c24ee4e56ea07cbc4166.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="35ca1e98-38ab-418f-bba6-24e7447143ca" CvTextArea="842, 491, 43, 13" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="843, 490, 165, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Quantity' type='' parentid='root' tag='DIV' class='root_x root_eu root_ga root_de root_ev root_ew root_ex root_ey root_uk root_fa root_fb root_d root_e root_f root_g root_bz root_et' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Quantity' /&gt;" Guid="5b804a54-4cb5-446f-8641-b4d134c1913d" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="35ca1e98-38ab-418f-bba6-24e7447143ca" CvTextArea="842, 274, 174, 18" CvTextArgument="New Market Order" CvType="Text" DesignTimeRectangle="843, 269, 172, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='New Market Order' parentid='root' tag='DIV' type='' class='root_cc root_bz root_jh root_fo root_sk root_aik' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='New Market Order' /&gt;" Guid="22511c57-7da6-489a-8b8d-5d012636fe09" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sell5051.45Buy5051.67Sp…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,198" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" ContentHash="qR5XKNOCiEaM2FD0qwoPlw" DesignTimeRectangle="843, 372, 374, 539" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='30' parentid='root' tag='DIV' /&gt;" Guid="1c97b8b3-e78d-4c95-a9d5-ada3b63ded4d" InformativeScreenshot="f7f3f9d9f358a8180ce8ee6cba9c00fc.jpg" Reference="5PvIeVfsZUqzuh7wRQgqvQ/V8srZhbSq0GCUIPwwAFIbA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,1078" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,305" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Pips'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_29" InteractionMode="SameAsCard" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[take_profit]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="2ecd2a17-3f52-4888-92ac-19e2274a069a" ContentHash="mBTnK6xGRU-dqQnzbatWjw" CvElementArea="864, 672, 133, 23" CvType="InputBox" DesignTimeRectangle="866, 674, 118, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='root_di root_do root_fe root_bx root_cc root_gb root_la root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_pc root_pd' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="73ea8f56-70c4-425d-97e9-1a812f967e84" InformativeScreenshot="d5c3a86481dba5ddc5fc1d8e51f84d12.png" IsResponsive="True" Reference="-qKmx3x1-U6rFPOpaL12rg/p2GzVlkhLU2sTK4rk8xsLw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="2ecd2a17-3f52-4888-92ac-19e2274a069a" CvTextArea="786, 676, 23, 13" CvTextArgument="Pips" CvType="Text" DesignTimeRectangle="787, 675, 22, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Pips' type='' parentid='root' tag='DIV' class='root_cc root_bz root_jh root_fo root_sb root_la' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pips' /&gt;" Guid="d2c05567-7829-41ea-a5e6-2413a3c0466a" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="ui:ElementOperationException" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <ActivityAction x:TypeArguments="ui:ElementOperationException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:ElementOperationException" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,503" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Take profit'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_20" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="327b0eb0-7430-45a0-bb32-eb9e7fec17c4" CvElementArea="1083, 572, 20, 20" CvType="CheckBox" DesignTimeRectangle="1087, 575, 13, 13" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' id='ic_checkmark' tag='svg' class='' aaname='      ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e4822739-9553-41a8-9f33-6ddbbf98ad99" InformativeScreenshot="5677212b2dbb88b82051aac4cbe88f2a.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                <uix:Target CVScreenId="327b0eb0-7430-45a0-bb32-eb9e7fec17c4" CvTextArea="1104, 575, 54, 13" CvTextArgument="Take profit" CvType="Text" DesignTimeRectangle="1106, 574, 51, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Take profit' type='' parentid='root' tag='DIV' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Take profit' /&gt;" Guid="d1cfdbe7-4e94-4383-91f9-5028716990b3" SearchSteps="FuzzySelector, CV" />
+                                <uix:Target CVScreenId="327b0eb0-7430-45a0-bb32-eb9e7fec17c4" CvTextArea="842, 274, 174, 18" CvTextArgument="New Market Order" CvType="Text" DesignTimeRectangle="843, 269, 172, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='New Market Order' parentid='root' tag='DIV' type='' class='root_cc root_bz root_jh root_fo root_sk root_aik' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='New Market Order' /&gt;" Guid="caae896d-d453-4b4b-ad0b-9d03351a06be" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                            <uix:TargetAnchorable.PointOffset>
+                              <uix:PointOffset Y="-2" />
+                            </uix:TargetAnchorable.PointOffset>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Pips'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_30" InteractionMode="SameAsCard" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[take_profit]" Version="V5">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="2ecd2a17-3f52-4888-92ac-19e2274a069a" ContentHash="mBTnK6xGRU-dqQnzbatWjw" CvElementArea="864, 672, 133, 23" CvType="InputBox" DesignTimeRectangle="866, 674, 118, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='root_di root_do root_fe root_bx root_cc root_gb root_la root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_pc root_pd' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="73ea8f56-70c4-425d-97e9-1a812f967e84" InformativeScreenshot="d5c3a86481dba5ddc5fc1d8e51f84d12.png" IsResponsive="True" Reference="-qKmx3x1-U6rFPOpaL12rg/p2GzVlkhLU2sTK4rk8xsLw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CVScreenId="2ecd2a17-3f52-4888-92ac-19e2274a069a" CvTextArea="786, 676, 23, 13" CvTextArgument="Pips" CvType="Text" DesignTimeRectangle="787, 675, 22, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Pips' type='' parentid='root' tag='DIV' class='root_cc root_bz root_jh root_fo root_sb root_la' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pips' /&gt;" Guid="d2c05567-7829-41ea-a5e6-2413a3c0466a" SearchSteps="FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+              <TryCatch.Finally>
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </TryCatch.Finally>
+            </TryCatch>
+            <uix:NCheckState DisplayName="Check App State 'Stop loss'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1157" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,305" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into '-123'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_28" InteractionMode="HardwareEvents" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[&quot;-&quot;+stop_loss]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="254eb248-c51f-4a1b-a807-8c2de35dbf20" ContentHash="3yC1mZEyrkiGlGJYJ1QRLg" CvElementArea="621, 673, 133, 22" CvType="InputBox" DesignTimeRectangle="623, 674, 118, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" Guid="05ee1236-3431-4c72-8130-c4d892e512a3" InformativeScreenshot="68040b2cb583437a7975defef84be7b7.png" Reference="-qKmx3x1-U6rFPOpaL12rg/l_oAWzxB-0K1pyX2Q4QY-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,503" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Stop loss'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,198" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="462b4674-4596-47a8-8604-27a111103b9d" ContentHash="i72tDVyyREGALCx191UW1A" CvElementArea="620, 649, 20, 19" CvType="CheckBox" DesignTimeRectangle="624, 652, 13, 13" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' id='ic_checkmark' tag='svg' class='' aaname='      ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="73bea408-3a1d-4e22-b312-a0bdbf72dd8f" InformativeScreenshot="140a56af5719407d6e6123890342eff7.png" Reference="-qKmx3x1-U6rFPOpaL12rg/HSm4XmJPHkSqgx-J0iM1Sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="462b4674-4596-47a8-8604-27a111103b9d" CvTextArea="642, 652, 47, 13" CvTextArgument="Stop loss" CvType="Text" DesignTimeRectangle="643, 651, 45, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Stop loss' parentid='root' tag='DIV' type='' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Stop loss' /&gt;" Guid="da9e870e-51d6-4142-b6c4-cf33ddc9aa83" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into '-123'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,241" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="SameAsCard" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Text="[&quot;-&quot;+stop_loss]" Version="V5">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="254eb248-c51f-4a1b-a807-8c2de35dbf20" ContentHash="3yC1mZEyrkiGlGJYJ1QRLg" CvElementArea="621, 673, 133, 22" CvType="InputBox" DesignTimeRectangle="623, 674, 118, 19" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' tag='INPUT' /&gt;" Guid="05ee1236-3431-4c72-8130-c4d892e512a3" InformativeScreenshot="68040b2cb583437a7975defef84be7b7.png" Reference="-qKmx3x1-U6rFPOpaL12rg/l_oAWzxB-0K1pyX2Q4QY-A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="65cbdab2-16f4-416b-905e-8054b5096f63" ContentHash="6CbZwUot4kW8UovqcISRGg" CvElementArea="841, 572, 19, 18" CvType="CheckBox" DesignTimeRectangle="847, 579, 7, 5" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' parentid='ic_checkmark' tag='path' class='' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="64059d8b-ad46-45e0-8e75-dc70ca375052" InformativeScreenshot="079aa75379d684ad0b8cb17fbd31c275.jpg" Reference="5PvIeVfsZUqzuh7wRQgqvQ/gX4RsKCMLkWYHFI1_wnw9Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="65cbdab2-16f4-416b-905e-8054b5096f63" CvTextArea="862, 575, 47, 13" CvTextArgument="Stop loss" CvType="Text" DesignTimeRectangle="863, 574, 45, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Stop loss' type='' parentid='root' tag='DIV' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Stop loss' /&gt;" Guid="ddfd35b8-14f3-49cd-8187-b96de6225ff3" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <Assign sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[status_code]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[200]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[message]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">["{ ""order_amount"": """ + order_amount + """, ""stop_loss"": """ + stop_loss + """, ""take_profit"": """ + take_profit + """, ""symbol"": """ + symbol + """, ""purchase_type"": """ + purchase_type + """ }"]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,170" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;{ &quot;&quot;order_amount&quot;&quot;: &quot;&quot;&quot; + order_amount + &quot;&quot;&quot;, &quot;&quot;stop_loss&quot;&quot;: &quot;&quot;&quot; + stop_loss + &quot;&quot;&quot;, &quot;&quot;take_profit&quot;&quot;: &quot;&quot;&quot; + take_profit + &quot;&quot;&quot;, &quot;&quot;symbol&quot;&quot;: &quot;&quot;&quot; + symbol + &quot;&quot;&quot;, &quot;&quot;purchase_type&quot;&quot;: &quot;&quot;&quot; + purchase_type + &quot;&quot;&quot; }&quot;]" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, 22, 1936, 1186" BrowserType="Chrome" ContentHash="OPPPyEtwgUGNsVN1TGptFA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVDhPjZK7SitRFIb3A4i2ghYBOxs7L2inYGkh4q0wKAhaWIhopWAhiGBh4QPYqGBlZyMjPoDBkJAQkhMMBAPByYlJJpkxk+/sNZlAToyc88PHvqz/37Nms1Wn6vV6UGO4rks7sic13/Zdtm0HHMcJOaUS7uMjjYsL2NmB9XUae3u4V1c4pol4xOvHmrIsK1CtVgu1tzc4OYHdXdjchJUVmJuD6WkYG4PxceynJ8QrGT+uVLlcDlmpFI3DQ9jehrU1mJ+H2VmYnISRERgagv5+6Omh+vCAZLxwsVgManCPjmBjAxYX+drfx7q/p5RIILUWn5kMzuoqjb4+by5ZZZqmUXp+Bl2QdivX1+i9H/mamgKlqB4cyNpQ+Xye2tmZ1+7n3R2ybsd8eaGiO3L0r9SWlryvywGylrrK5XLYW1vYun2Zt1PWty/mnxCPymaz2MvLfNzcIPMWxePjrqEW9sSE51MZfRnWwgIytlMfHOwabPFxfu75VDqdNt5vb9HjX7i9vV2Dgj083PIZKpVKBZPJJJ38Dga7hi39oH7pixWPZL23kEgkQho6eT89pTI6ijMwQGlmhuzlZXu9+ZBE8Xg8EIvFChr+k4Jk/HhT0Wg0EIlEQhr+QUi8fuy7wuFw8PX11dDQgSE13+ZLqT/ZUq1njlGM0gAAAABJRU5ErkJggg==" InformativeScreenshot="09288c75b810cd2d6f639f44e0a884cf.jpg" Reference="5PvIeVfsZUqzuh7wRQgqvQ/671yIxakiEivivlwI6mlpw" Selector="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" Url="https://app.ctrader.com/" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

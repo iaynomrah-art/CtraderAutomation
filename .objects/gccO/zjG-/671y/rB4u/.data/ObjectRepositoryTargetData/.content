@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wVwgggKAbk-Nj5wlXqwLxQ" Reference="5PvIeVfsZUqzuh7wRQgqvQ/rB4uLLqmUUWXmPagrMBN0g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="e7a14b67-a1c5-4271-8bf8-9577411684f0" CvElementArea="1084, 572, 19, 18" CvType="CheckBox" DesignTimeRectangle="1091, 579, 6, 5" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' parentid='ic_checkmark' tag='path' class='' aaname='' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="7a274e36-b455-4ca7-b9a3-493d29aa1489" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8708d7a1-601f-4cf7-8615-3d2bc5a41719" CvTextArea="842, 274, 174, 18" CvTextArgument="New Market Order" CvType="Text" DesignTimeRectangle="843, 269, 172, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='New Market Order' parentid='root' tag='DIV' type='' class='root_cc root_bz root_jh root_fo root_sk root_aik' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='New Market Order' /&gt;" Guid="23ebd867-341c-4cb8-a1af-7b1cab63b991" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="3ab23630-f476-49f9-a4df-96661a944f7a" CvTextArea="1104, 575, 54, 13" CvTextArgument="Take profit" CvType="Text" DesignTimeRectangle="1106, 574, 51, 16" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Take profit' type='' parentid='root' tag='DIV' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Take profit' /&gt;" Guid="60dd4f94-00bf-48b1-8c61-cf4b8a25a1b8" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="08a1930b44178f19a2eed1747f8cf3a7.jpg" xmlns="">04IRAQpfxDUuiYVGIn7Tqyw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

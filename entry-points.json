@@ -1,0 +1,56 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "e3833cca-3cae-4ed7-8ed9-954fe411b787",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "symbol": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "order_amount": {
+            "type": "string"
+          },
+          "stop_loss": {
+            "type": "string"
+          },
+          "take_profit": {
+            "type": "string"
+          },
+          "purchase_type": {
+            "type": "string"
+          },
+          "account_id": {
+            "type": "string"
+          },
+          "operation": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          }
+        }
+      }
+    }
+  ]
+}
