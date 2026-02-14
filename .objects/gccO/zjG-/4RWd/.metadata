@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Spotware cTrader  Open Trading Platfor(1)",
+  "Type": "Screen",
+  "Id": "4RWdfBGAKU6N_nUUaBwO_A",
+  "Reference": "5PvIeVfsZUqzuh7wRQgqvQ/4RWdfBGAKU6N_nUUaBwO_A",
+  "ParentRef": "5PvIeVfsZUqzuh7wRQgqvQ/zjG-C9m93UWnK3HGByW5Bw",
+  "Created": "2026-02-14T07:23:57.4144883Z",
+  "Updated": "2026-02-14T07:23:57.4144883Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

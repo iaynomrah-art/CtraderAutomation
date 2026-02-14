@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hO724iLAGUeFWPWJkRFlMA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="c87f89aa-5db1-4b6e-a8bb-6a66ad3ba332" CvElementArea="971, 612, 182, 28" CvType="InputBox" DesignTimeRectangle="971, 612, 181, 28" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='root_di root_do root_fe root_bx root_cc root_gb root_la root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_oy root_oz' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="c78ca324-d561-4c2e-941f-f6a179070f2b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c87f89aa-5db1-4b6e-a8bb-6a66ad3ba332" CvTextArea="971, 595, 53, 17" CvTextArgument="Quantity" CvType="Text" DesignTimeRectangle="971, 596, 53, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Quantity' type='' parentid='root' tag='DIV' class='root_x root_eu root_ga root_de root_ev root_ew root_ex root_ey root_xo root_fa root_fb root_d root_e root_f root_g root_bz root_et' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Quantity' /&gt;" Guid="713098c6-fce4-4fa8-8872-a0532cdbb1ad" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ce7f4f20aa7eef7b7066366930d677fa.jpg" xmlns="">0-ZnK2HvDxUybsO6KKGBEpw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

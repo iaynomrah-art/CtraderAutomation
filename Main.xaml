@@ -114,33 +114,33 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1248,3683" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="2433.2000000000003,3672.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Spotware cTrader  Open Trading Platfor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,3660" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="93d2c58b-a1dd-41e9-99e1-8fd7748a7913" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Spotware cTrader  Open Trading Platfor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="522.4,3649.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="93d2c58b-a1dd-41e9-99e1-8fd7748a7913" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,3466" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520.8,3456" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[operation]" sap:VirtualizedContainerService.HintSize="488,3402" sap2010:WorkflowViewState.IdRef="Switch`1_3">
+            <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[operation]" sap:VirtualizedContainerService.HintSize="487.2,3392" sap2010:WorkflowViewState.IdRef="Switch`1_3">
               <Switch.Default>
-                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="486,719" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="485.6,717.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="452,178.4" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[status_code]</OutArgument>
                     </Assign.To>
@@ -148,7 +148,7 @@
                       <InArgument x:TypeArguments="x:Int32">[400]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="452,178.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[message]</OutArgument>
                     </Assign.To>
@@ -156,29 +156,29 @@
                       <InArgument x:TypeArguments="x:String">["Invalid Operation"]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Invalid Operation&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,178.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Invalid Operation&quot;]" />
                   <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="452,118" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1" Reason="operation is required" />
                 </Sequence>
               </Switch.Default>
-              <Sequence x:Key="place-order" DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,241" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence x:Key="place-order" DisplayName="Body" sap:VirtualizedContainerService.HintSize="485.6,240" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="PlaceOrder - Invoke Workflow File (PlaceOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="PlaceOrder.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="PlaceOrder - Invoke Workflow File (PlaceOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="PlaceOrder.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <scg:Dictionary x:TypeArguments="x:String, Argument" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
-              <Sequence x:Key="edit-place-order" DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,241" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <Sequence x:Key="edit-place-order" DisplayName="Body" sap:VirtualizedContainerService.HintSize="485.6,240" sap2010:WorkflowViewState.IdRef="Sequence_21">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EditPlaceOrder - Invoke Workflow File (EditPlaceOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="EditPlaceOrder.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EditPlaceOrder - Invoke Workflow File (EditPlaceOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="EditPlaceOrder.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <OutArgument x:TypeArguments="x:String" x:Key="message" />
                     <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
@@ -190,21 +190,21 @@
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
-              <Sequence x:Key="default" DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1444" sap2010:WorkflowViewState.IdRef="Sequence_22">
+              <Sequence x:Key="default" DisplayName="Body" sap:VirtualizedContainerService.HintSize="485.6,1438.4" sap2010:WorkflowViewState.IdRef="Sequence_22">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NCheckState DisplayName="Check App State 'Log in'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1380" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="93d2c58b-a1dd-41e9-99e1-8fd7748a7913" Version="V5">
+                <uix:NCheckState DisplayName="Check App State 'Log in'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1374.4" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="93d2c58b-a1dd-41e9-99e1-8fd7748a7913" Version="V5">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,613" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,609.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Login - Invoke Workflow File (Login.xaml)" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Login.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Login - Invoke Workflow File (Login.xaml)" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Login.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="username">[username]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="password">[password]</InArgument>
@@ -212,7 +212,7 @@
                           <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CheckAccount - Invoke Workflow File (CheckAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="CheckAccount.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CheckAccount - Invoke Workflow File (CheckAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="CheckAccount.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="account_id">[account_id]</InArgument>
                           <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
@@ -220,7 +220,7 @@
                           <OutArgument x:TypeArguments="x:String" x:Key="current_account_id" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InputOrder.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="InputOrder.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:String" x:Key="message" />
                           <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
@@ -229,18 +229,20 @@
                           <InArgument x:TypeArguments="x:String" x:Key="stop_loss">[stop_loss]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="take_profit">[take_profit]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="order_amount">[order_amount]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="stop_loss_value" />
+                          <InArgument x:TypeArguments="x:String" x:Key="take_profit_value" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
                   </uix:NCheckState.IfExists>
                   <uix:NCheckState.IfNotExists>
-                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,427" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,424.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CheckAccount - Invoke Workflow File (CheckAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="CheckAccount.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="CheckAccount - Invoke Workflow File (CheckAccount.xaml)" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="CheckAccount.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="account_id">[account_id]</InArgument>
                           <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
@@ -248,7 +250,7 @@
                           <OutArgument x:TypeArguments="x:String" x:Key="current_account_id" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="InputOrder.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="InputOrder.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <OutArgument x:TypeArguments="x:String" x:Key="message" />
                           <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
@@ -257,6 +259,8 @@
                           <InArgument x:TypeArguments="x:String" x:Key="stop_loss">[stop_loss]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="take_profit">[take_profit]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="order_amount">[order_amount]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="stop_loss_value" />
+                          <InArgument x:TypeArguments="x:String" x:Key="take_profit_value" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -266,13 +270,13 @@
                   </uix:NCheckState.Target>
                 </uix:NCheckState>
               </Sequence>
-              <Sequence x:Key="switch-account" DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,427" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence x:Key="switch-account" DisplayName="Body" sap:VirtualizedContainerService.HintSize="485.6,424.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="SwitchUser - Invoke Workflow File (SwitchUser.xaml)" sap:VirtualizedContainerService.HintSize="452,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="SwitchUser.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="SwitchUser - Invoke Workflow File (SwitchUser.xaml)" sap:VirtualizedContainerService.HintSize="452,184.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="SwitchUser.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="username">[username]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="password">[password]</InArgument>
@@ -280,15 +284,17 @@
                     <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_27" UnSafe="False" WorkflowFileName="InputOrder.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="InputOrder - Invoke Workflow File (InputOrder.xaml)" sap:VirtualizedContainerService.HintSize="452,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="InputOrder.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <OutArgument x:TypeArguments="x:String" x:Key="message">[message]</OutArgument>
-                    <OutArgument x:TypeArguments="x:Int32" x:Key="status_code">[status_code]</OutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="order_amount">[order_amount]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="stop_loss">[stop_loss]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="take_profit">[take_profit]</InArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="message" />
+                    <OutArgument x:TypeArguments="x:Int32" x:Key="status_code" />
                     <InArgument x:TypeArguments="x:String" x:Key="symbol">[symbol]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="purchase_type">[purchase_type]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="stop_loss">[stop_loss]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="take_profit">[take_profit]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="order_amount">[order_amount]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="stop_loss_value" />
+                    <InArgument x:TypeArguments="x:String" x:Key="take_profit_value" />
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>

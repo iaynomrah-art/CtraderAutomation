@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="46X7hcTgwEmhht1RKFE2zg" Reference="-qKmx3x1-U6rFPOpaL12rg/0HlmAo8TAEStzvSpz5imMQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, 22, 1936, 1186" BrowserType="Chrome" ContentHash="GTvIX0BPFkqAKZHJbUaoKQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVDhPjZK7SitRFIb3A4i2ghYBOxs7L2inYGkh4q0wKAhaWIhopWAhiGBh4QPYqGBlZyMjPoDBkJAQkhMMBAPByYlJJpkxk+/sNZlAToyc88PHvqz/37Nms1Wn6vV6UGO4rks7sic13/Zdtm0HHMcJOaUS7uMjjYsL2NmB9XUae3u4V1c4pol4xOvHmrIsK1CtVgu1tzc4OYHdXdjchJUVmJuD6WkYG4PxceynJ8QrGT+uVLlcDlmpFI3DQ9jehrU1mJ+H2VmYnISRERgagv5+6Omh+vCAZLxwsVgManCPjmBjAxYX+drfx7q/p5RIILUWn5kMzuoqjb4+by5ZZZqmUXp+Bl2QdivX1+i9H/mamgKlqB4cyNpQ+Xye2tmZ1+7n3R2ybsd8eaGiO3L0r9SWlryvywGylrrK5XLYW1vYun2Zt1PWty/mnxCPymaz2MvLfNzcIPMWxePjrqEW9sSE51MZfRnWwgIytlMfHOwabPFxfu75VDqdNt5vb9HjX7i9vV2Dgj083PIZKpVKBZPJJJ38Dga7hi39oH7pixWPZL23kEgkQho6eT89pTI6ijMwQGlmhuzlZXu9+ZBE8Xg8EIvFChr+k4Jk/HhT0Wg0EIlEQhr+QUi8fuy7wuFw8PX11dDQgSE13+ZLqT/ZUq1njlGM0gAAAABJRU5ErkJggg==" Reference="-qKmx3x1-U6rFPOpaL12rg/0HlmAo8TAEStzvSpz5imMQ" Selector="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" Url="https://app.ctrader.com/" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="09288c75b810cd2d6f639f44e0a884cf.jpg" xmlns="">0wBLRl2s56UKLbJF_q45mog</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>
