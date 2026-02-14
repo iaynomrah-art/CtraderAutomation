@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JsXnNnUyhU-FrfXntT106w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="db6ad846-b86f-4fe8-a399-40acf388f970" CvElementArea="809, 855, 24, 25" CvType="CheckBox" DesignTimeRectangle="814, 860, 16, 16" ElementType="Icon" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='' id='ic_checkmark' tag='svg' class='' aaname='      ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bf7fbaf2-39e5-4976-8855-ac513817f150" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="db6ad846-b86f-4fe8-a399-40acf388f970" CvTextArea="835, 861, 59, 16" CvTextArgument="Stop loss" CvType="Text" DesignTimeRectangle="837, 859, 57, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Stop loss' type='' parentid='root' tag='DIV' class='root_ii root_cc' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Stop loss' /&gt;" Guid="36060131-957e-407f-a40f-78be22d6ce4d" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="225008c9815b2b00861371384c63ece0.jpg" xmlns="">0SFnDdwyjYkm4pXLPdC4Anw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

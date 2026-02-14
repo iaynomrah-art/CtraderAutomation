@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="okbLvPF6jUmZdzPQuSm_jw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="746f9a7d-e9cc-4f63-a2e9-d846cd3cb95e" CvElementArea="1113, 884, 167, 28" CvType="InputBox" DesignTimeRectangle="1116, 887, 148, 24" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' tag='INPUT' class='root_di root_do root_fe root_bx root_cc root_gb root_ma root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_pc root_pd' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e56cff01-3c31-493e-89a4-edcaf3f75c33" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="746f9a7d-e9cc-4f63-a2e9-d846cd3cb95e" CvTextArea="1015, 891, 30, 15" CvTextArgument="Pips" CvType="Text" DesignTimeRectangle="1018, 889, 27, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Pips' type='' parentid='root' tag='DIV' class='root_cc root_bz root_ja root_fo root_sb root_ma' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pips' /&gt;" Guid="89576bad-3df1-410b-ae15-d2211110cc41" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="9e0a47fa03c15fdedfcda38f818201c7.jpg" xmlns="">0wO8suE45rEiEGPM39_RZaw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

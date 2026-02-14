@@ -1,0 +1,13 @@
+﻿{
+  "Name": "EURUSD",
+  "Type": "Element",
+  "Id": "M9nlBN6IXUyL3Iqxbnetqg",
+  "Reference": "5PvIeVfsZUqzuh7wRQgqvQ/M9nlBN6IXUyL3Iqxbnetqg",
+  "ParentRef": "5PvIeVfsZUqzuh7wRQgqvQ/671yIxakiEivivlwI6mlpw",
+  "Created": "2026-02-14T02:47:00.8947326Z",
+  "Updated": "2026-02-14T02:47:00.8947326Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

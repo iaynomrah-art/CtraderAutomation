@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Stop loss(2)",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "sQcaN3u6A0-E0Vo9yIK0SQ",
+  "Reference": "5PvIeVfsZUqzuh7wRQgqvQ/sQcaN3u6A0-E0Vo9yIK0SQ",
+  "ParentRef": "5PvIeVfsZUqzuh7wRQgqvQ/671yIxakiEivivlwI6mlpw",
+  "Created": "2026-02-14T03:36:51.565849Z",
+  "Updated": "2026-02-14T03:36:51.565849Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

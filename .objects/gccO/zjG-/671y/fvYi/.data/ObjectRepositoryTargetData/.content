@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hdyX4P95aEGbY99rXofwMA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.ctrader.com" CVScreenId="34f38575-e690-4718-b795-2245e53fcb74" CvElementArea="1114, 886, 167, 27" CvType="InputBox" DesignTimeRectangle="1116, 890, 148, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl type='text' class='root_di root_do root_fe root_bx root_mk root_gb root_la root_d root_ck root_f root_cl root_du root_bu root_ef root_ei root_eg root_eh root_bz root_rk root_rl' tag='INPUT' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="5860dab0-cb51-491f-bb7d-656500e24cf6" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="34f38575-e690-4718-b795-2245e53fcb74" CvTextArea="1016, 893, 28, 15" CvTextArgument="Pips" CvType="Text" DesignTimeRectangle="1018, 892, 27, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Pips' type='' parentid='root' tag='DIV' class='root_cc root_bz root_ja root_fo root_tm root_la' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Pips' /&gt;" Guid="6bf0bd17-0389-4485-ad26-ed190054074f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4daf771ce9e237b00588a32114b778a2.jpg" xmlns="">0QCub765b0Ead9jbcUsOKiA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

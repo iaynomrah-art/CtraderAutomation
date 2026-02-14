@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Pips(2)",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "S6S8ENtlr0aASpeUytGqBA",
+  "Reference": "5PvIeVfsZUqzuh7wRQgqvQ/S6S8ENtlr0aASpeUytGqBA",
+  "ParentRef": "5PvIeVfsZUqzuh7wRQgqvQ/671yIxakiEivivlwI6mlpw",
+  "Created": "2026-02-14T03:29:36.9050986Z",
+  "Updated": "2026-02-14T03:29:36.9050986Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.26.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
