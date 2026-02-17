@@ -114,26 +114,36 @@
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PlaceOrder" sap:VirtualizedContainerService.HintSize="1247,5742" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PlaceOrder" sap:VirtualizedContainerService.HintSize="1247,5679" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Spotware cTrader  Open Trading Platfor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,5719" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Spotware cTrader  Open Trading Platfor" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="524,5656" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,5525" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,5462" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="488,127" sap2010:WorkflowViewState.IdRef="Delay_4" />
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,261" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" InteractionMode="HardwareEvents" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Shortcuts="[d(hk)][k(F9)][u(hk)]" Version="V5" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'New order'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,198" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="202c7efa-dd8f-4e9a-906d-f037c409939d" ContentHash="uFhbaLFjukS9SRXl9IDWoQ" CvElementArea="1359, 887, 86, 23" CvTextArea="1386, 893, 54, 11" CvTextArgument="New order" CvType="Button" DesignTimeRectangle="1388, 891, 50, 17" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl class='root_ii' tag='SPAN' type='' aaname='New order' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='New order' /&gt;" Guid="7c8b4f6c-7d39-4dfa-afc8-7678ea0ef18b" InformativeScreenshot="10faee4a0b626d5a2f730c64ee77d54f.jpg" Reference="5PvIeVfsZUqzuh7wRQgqvQ/G_KAbH_8QEG-KP3A2yTL_A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="202c7efa-dd8f-4e9a-906d-f037c409939d" CvElementArea="1359, 887, 86, 23" CvTextArea="1386, 893, 54, 11" CvTextArgument="New order" CvType="Button" DesignTimeRectangle="1361, 891, 82, 17" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='           New order' tag='BUTTON' type='button' class='root_cc root_lj root_lh root_di root_do root_lk root_ll root_co root_cg root_cl root_ck root_dy root_fp root_gb root_fy root_bu root_bv root_bw root_ef root_eg root_eh root_ei root_bx root_by root_lm root_fn root_om root_lb root_on root_oo root_op root_oq' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='New order' /&gt;" Guid="fecd3ed8-8c73-44ea-b309-6fa39c9b7677" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'EURUSD'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,198" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5cd0d242-1345-4e4e-8f79-9a3073cb620c" Version="V5">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="app.ctrader.com" CVScreenId="8f8c5ff2-1b6f-4ffe-a690-bdacef666d08" CvElementArea="866, 341, 351, 22" CvType="InputBox" DesignTimeRectangle="865, 341, 353, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='15' parentid='root' tabindex='-1' tag='DIV' /&gt;" Guid="4880d6a5-9fe2-4fd1-81ce-4a501b70520a" InformativeScreenshot="b2b3c53a907fced41afa27a0a10c9cb0.jpg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Spotware cTrader | Open Trading Platform' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
